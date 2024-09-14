@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #885df1;
+        border: 1px solid #000;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      h2 {
+        text-align: center;
+        border-bottom: #000;
+        font-size: 20px;
+      }
+      body {
+        background: #fdf3f3;
+        width: 50%;
+        margin: 60px auto;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      button {
+        margin: 0 auto;
+        display: block;
+        padding: 10px 15px 10px 5px;
+        background: #885df1;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        width: 100%;
+      }
+      .more {
+        display: block;
+        margin: 15px auto;
+        text-decoration: none;
+        color: #885df1;
+        font-size: 13px;
+        transition: 200ms ease-in-out;
+      }
+      .more:hover {
+        text-decoration: underline;
+      }
+      .coder {
+        margin: 0 auto;
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 15px;
+        text-decoration: none;
+        transition: 200ms ease-in-out;
+      }
+      .coder:hover {
+        text-decoration: underline;
+      }
+      .container {
+        background: white;
+        width: 500px;
+        padding: 80px 100px 80px 100px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Yoga</h1>
+
+      <h2>Breath in and relax</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/139/407/original/benefits-yoga-fb.jpg?1723727680"
+        alt="woman doing yoga"
+      />
+      <hr />
+      <p>
+        Yoga is a practice that connects the body, breath, and mind. It uses
+        physical postures, breathing exercises, and meditation to improve
+        overall health. Yoga was developed as a spiritual practice thousands of
+        years ago. Today, most Westerners who do yoga do it for exercise or to
+        reduce stress.
+        <br />
+        <a
+          href="https://medlineplus.gov/ency/patientinstructions/000876.htm#:~:text=Yoga%20is%20a%20practice%20that,exercise%20or%20to%20reduce%20stress."
+          target="_blank"
+          class="more"
+        >
+          Learn more about Yoga on goggle.
+        </a>
+      </p>
+      <button>👉 Book Now</button>
+    </div>
+    <a
+      href="https://www.linkedin.com/in/loveness-luhlanga-563a52188/"
+      target="_blank"
+      class="coder"
+    >
+      This page was built by Loveness Luhlanga
+    </a>
+    <script>
+      function bookNow() {
+        let name = prompt("What is your name?");
+        let age = prompt("How old are you?");
+        let h1 = document.querySelector("h1");
+        if (age <= 19) {
+          h1.innerHTML =
+            "Thank you" +
+            " " +
+            name +
+            "," +
+            "<br/>You have booked yoga for kids";
+        } else {
+          h1.innerHTML =
+            "Thank you" +
+            " " +
+            name +
+            "," +
+            "<br/>You have booked yoga for adults";
+        }
+      }
+      let bookButton = document.querySelector("button");
+      bookButton.addEventListener("click", bookNow);
+    </script>
+  </body>
+</html>
